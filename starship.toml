@@ -1,0 +1,113 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character] # The name of the module we are configuring is 'character'
+#success_symbol = '[🚀 ](bold blue)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+success_symbol = '[➜](bold green) '
+error_symbol = '[✗](bold red) '
+[directory]
+truncation_length = 4
+home_symbol = "❓"
+truncation_symbol = " "
+format = "[$path ](fg:#ff0000)[$read_only]($read_only_style)"
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[nodejs]
+format = ' ➜ [🎁$version](bold green)'
+version_format = 'v${major}'
+
+[git_branch]
+symbol = '🌱 '
+style = "fg:#ffd700"
+format = '[$symbol$branch(:$remote_branch)](bold $style) '
+
+#[git_status]
+#style = "bg:#370617"
+#format = '[[($all_status$ahead_behind )](bg:#370617)]($style)'
+# ~/.config/starship.toml
+
+[git_state]
+#style = "bg:#ffffff"
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = '[🍒 PICKING](bold red)'
+
+[aws]
+style = "bg:#6a040f"
+symbol = " "
+format = "[[ $symbol $region ](bg:#6a040f)]($style)"
+[aws.region_aliases]
+us-east-1 = "va"
+
+#[hostname]
+#ssh_only = false
+#format = '[$ssh_symbol](bold blue)on [$hostname](bold red) '
+#trim_at = '.companyname.com'
+#disabled = false
+
+#[time]
+#disabled = false
+#time_format = "%a %m/%d %I:%M %P" # Hour:Minute Format
+#style = "bg:#9d0208"
+#format = '[[  $time ](bg:#9d0208)]($style)'
+
+#[os]
+#format = "on [($name )]($style)"
+#style = "bold blue"
+#disabled = false
+
+[package]
+format = 'via [🎁 $version](208 bold) '
+
+[username]
+style_user = 'white bold'
+style_root = 'green bold'
+format = '[$user]($style) '
+disabled = false
+show_always = true
+
+# This is the default symbols table.
+#[os.symbols]
+#Alpine = "🏔️ "
+#Amazon = "🙂 "
+#Android = "🤖 "
+#Arch = "🎗️ "
+#CentOS = "💠 "
+#Debian = "🌀 "
+#DragonFly = "🐉 "
+#Emscripten = "🔗 "
+#EndeavourOS = "🚀 "
+#Fedora = "🎩 "
+#FreeBSD = "😈 "
+#Garuda = "🦅 "
+#Gentoo = "🗜️ "
+#HardenedBSD = "🛡️ "
+#Illumos = "🐦 "
+#Linux = "🐧 "
+#Macos = "🍎 "
+#Manjaro = "🥭 "
+#Mariner = "🌊 "
+#MidnightBSD = "🌘 "
+#Mint = "🌿 "
+#NetBSD = "🚩 "
+#NixOS = "❄️ "
+#OpenBSD = "🐡 "
+#openSUSE = "🦎 "
+#OracleLinux = "🦴 "
+#Pop = "🍭 "
+#Raspbian = "🍓 "
+#Redhat = "🎩 "
+#RedHatEnterprise = "🎩 "#
+##Redox = "🧪 "
+#Solus = "⛵ "
+#SUSE = "🦎 "
+#Ubuntu = "🎯 "
+#Unknown = "❓ "
+#Windows = "🪟 "
+
