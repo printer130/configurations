@@ -1,0 +1,25 @@
+{
+  "workbench.editor.focusRecentEditorAfterClose": false,
+  "workbench.editor.closeEmptyGroups": false,
+  "workbench.editor.tabCloseButton": "off",
+  "git.confirmSync": false,
+  "window.zoomLevel": 3,
+  "editor.fontFamily": "'FiraCode Nerd Font', 'monospace', monospace",
+  "editor.guides.bracketPairs": "active",
+  "workbench.iconTheme": "eq-material-theme-icons-light",
+  "workbench.colorTheme": "Hack The Box",
+  "editor.codeLensFontFamily": "\"FiraCode Nerd Font\"",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "workbench.activityBar.visible": false,
+  "javascript.format.semicolons": "remove",
+  "json.format.enable": true,
+  "workbench.editor.labelFormat": "short",
+  "javascript.preferences.quoteStyle": "single",
+  "javascript.format.enable": true,
+  "editor.tabSize": 2,
+  "[javascriptreact]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
+}
