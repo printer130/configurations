@@ -27,7 +27,7 @@ window:
 # Window title
   title: Alacritty
 scrolling:
-  multiplier: 3
+  multiplier: 8
   #auto_scroll: false
   # Window class (Linux/BSD only):
   #class:
