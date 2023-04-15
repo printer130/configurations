@@ -31,15 +31,15 @@ format = '[$symbol$branch(:$remote_branch)](bold $style) '
 
 [git_status]
 conflicted = "⚔️ "
-ahead = "🏎️ 💨 ✗${count}"
+ahead = "🏎️  💨 ✗${count}"
 behind = "🐢 ✗${count}"
-diverged = "🔱 🏎️ 💨 ✗${ahead_count} 🐢 ✗${behind_count}"
+diverged = "🔱  🏎️  💨 ✗ ${ahead_count}  🐢  ✗${behind_count}"
 untracked = "🛤️ ✗${count}"
 stashed = "📦 "
-modified = "📝 ${count}"
-staged = "🗃️ ✗${count}"
-renamed = "📛 ✗${count}"
-deleted = "🗑️ ✗${count}"
+modified = "📝  ${count}"
+staged = "🗃️  ✗${count}"
+renamed = "📛  ✗${count}"
+deleted = "🗑️  ✗${count}"
 style = "bright-cyan"
 format = "$all_status$ahead_behind"
 
