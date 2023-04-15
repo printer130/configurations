@@ -1,4 +1,5 @@
 "$schema" = 'https://starship.rs/config-schema.json'
+continuation_prompt = '▶▶ '
 
 add_newline = true
 
@@ -9,7 +10,7 @@ success_symbol = '[➜](bold green) '
 error_symbol = '[✗](bold red) '
 [directory]
 truncation_length = 4
-home_symbol = "❓"
+home_symbol = "❓ "
 truncation_symbol = " "
 format = "[$path ](fg:#ff0000)[$read_only]($read_only_style)"
 
@@ -20,7 +21,7 @@ format = "[$path ](fg:#ff0000)[$read_only]($read_only_style)"
 "Pictures" = " "
 
 [nodejs]
-format = ' ➜ [🎁$version](bold green)'
+format = '➜[$version](bold green)'
 version_format = 'v${major}'
 
 [git_branch]
@@ -28,10 +29,19 @@ symbol = '🌱 '
 style = "fg:#ffd700"
 format = '[$symbol$branch(:$remote_branch)](bold $style) '
 
-#[git_status]
-#style = "bg:#370617"
-#format = '[[($all_status$ahead_behind )](bg:#370617)]($style)'
-# ~/.config/starship.toml
+[git_status]
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ✗${count}"
+behind = "🐢 ✗${count}"
+diverged = "🔱 🏎️ 💨 ✗${ahead_count} 🐢 ✗${behind_count}"
+untracked = "🛤️ ✗${count}"
+stashed = "📦 "
+modified = "📝 ${count}"
+staged = "🗃️ ✗${count}"
+renamed = "📛 ✗${count}"
+deleted = "🗑️ ✗${count}"
+style = "bright-cyan"
+format = "$all_status$ahead_behind"
 
 [git_state]
 #style = "bg:#ffffff"
@@ -61,9 +71,21 @@ us-east-1 = "va"
 #format = "on [($name )]($style)"
 #style = "bold blue"
 #disabled = false
+#[time]
+#time_format = "%T"
+#format = "🕙 $time($style) "
+#style = "bright-white"
+#disabled = false
+
+[memory_usage]
+format = "$symbol[${ram}( | ${swap})]($style) "
+threshold = 70
+style = "bold dimmed white"
+disabled = false
 
 [package]
-format = 'via [🎁 $version](208 bold) '
+format = ' via [🎩 $version](121 bold) '
+version_format = '${major}'
 
 [username]
 style_user = 'white bold'
