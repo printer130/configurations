@@ -1,3 +1,63 @@
-key_bindings:
-  - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
 
+
+window:
+
+  opacity: 0.90
+  dimensions:
+    columns: 100
+    lines: 85
+
+  padding:
+    x: 14
+    y: 0
+
+  # Spread additional padding evenly around the terminal content.
+  dynamic_padding: false
+  decorations: none
+
+  # Window decorations
+  #
+  # Available values:
+  # - full: borders and title bar
+  # - none: neither borders nor title bar
+  # - transparent: title bar, transparent background and title bar buttons
+  # - buttonless: title bar, transparent background, but no title bar buttons
+  #decorations: buttonless
+# Font configuration (changes require restart)
+# Window title
+  title: Alacritty
+scrolling:
+  multiplier: 3
+  #auto_scroll: false
+  # Window class (Linux/BSD only):
+  #class:
+    # Application instance name
+    #instance: Alacritty
+    # General application class
+   # general: Alacritty
+font:
+  # The normal (roman) font face to use.
+  # Style can be specified to pick a specific face.
+  normal:
+    family: "Hack Nerd Font Mono"
+    #style: Light
+    # family: "Fira Code"
+    # family: "Source Code Pro"
+    # style: Retina
+
+#cursor:
+  # Cursor style
+  #
+  # Values for `style`:
+  #   - ▇ Block
+  #   - _ Underline
+  #   - | Beam
+  #style: Block
+
+  # If this is `true`, the cursor will be rendered as a hollow box when the
+  # window is not focused.
+  #unfocused_hollow: true
+
+
+#mouse_bindings:
+# - { mouse: Middle, action: PasteSelection }
